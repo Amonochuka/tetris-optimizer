@@ -77,3 +77,20 @@ func Solve(b *Board, pieces []Tetromino, index int) bool {
 	}
 	return false
 }
+
+//newboard constructor
+
+func NewBoard(size int) *Board{
+	cells := make([][]rune, size)
+	for i := range cells{
+		cells[i] = make([]rune, size)
+		for j := range cells[i]{
+			cells[i][j] = '.'
+		}
+	}
+
+	return &Board{
+		cells: cells,
+		size: size,
+	}
+}
