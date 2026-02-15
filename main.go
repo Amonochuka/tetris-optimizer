@@ -19,6 +19,7 @@ func main() {
 	file, err := os.Open(os.Args[1])
 	if err != nil {
 		fmt.Println("ERROR")
+		return
 	}
 	defer file.Close()
 
