@@ -1,21 +1,36 @@
 package main
 
-import "tetris-optimizer/board"
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
 
-
-//newboard constructor
-
-func NewBoard(size int) *board.Board{
-	cells := make([][]rune, size)
-	for i := range cells{
-		cells[i] = make([]rune, size)
-		for j := range cells[i]{
-			cells[i][j] = '.'
-		}
+func main() {
+	if len(os.Args) != 2 {
+		fmt.Println("ERROR")
 	}
 
-	return &board.Board{
-		Cells: cells,
-		Size: size,
+	file, err := os.Open(os.Args[1])
+	if err != nil {
+		fmt.Println("ERROR")
 	}
+	defer file.Close()
+
+	scanner := bufio.NewScanner(file)
+	lineNumber := 1
+
+	for scanner.Scan() {
+		line := scanner.Text()
+		fmt.Printf("%d : %q\n", lineNumber, line)
+		lineNumber++
+	}
+
+	if err := scanner.Err(); err != nil {
+		fmt.Println("ERROR")
+		return
+	}
+
+	//testtingif file open works before adding other parts
+	fmt.Println("OK")
 }

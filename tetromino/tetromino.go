@@ -10,4 +10,4 @@ type Tetromino struct {
 	Letter rune
 }
 
-var pieces []Tetromino
+//var pieces []Tetromino

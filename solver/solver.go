@@ -7,7 +7,7 @@ import ("tetris-optimizer/tetromino"
 func Solve(b *board.Board, pieces []tetromino.Tetromino, index int) bool {
 
 	if index == len(pieces) {
-		return false
+		return true
 	}
 
 	t := pieces[index]
