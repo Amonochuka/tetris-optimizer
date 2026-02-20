@@ -31,14 +31,12 @@ go run . sample.txt
   - the file may or may not end with a blank line
 
 - Example:
-
+```
 #...
-
 #...
-
 #...
-
 #...
+```
 
 
 ## Rules
@@ -59,30 +57,23 @@ If a perfect square is not possible, empty cells are left as '.'
 Example
 
 Input:
+```
 
 ...#
-
 ...#
-
 ...#
-
 ...#
 
 ....
-
 ....
-
 ....
-
 ####
 
 .###
-
 ...#
-
 ....
-
 ....
+```
 
 ```Run:
 go run . sample.txt
@@ -90,31 +81,26 @@ go run . sample.txt
 
 Output:
 
+```
 ABBB.
-
 ACCC.
-
 A....
-
 A....
+```
 
 (letters may vary depending on the input order)
 
 ## Project structure
-.
+
+```
 ├── main.go
-
 ├── board/
-
 │   └── board.go
-
 ├── solver/
-
 │   └── solver.go
-
 └── tetromino/
-
     └── tetromino.go
+```
 
 
 ## Tests
