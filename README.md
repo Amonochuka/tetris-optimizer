@@ -1,5 +1,5 @@
-PASTABLE BLOCK OF README
-# tetris-optimizer
+
+# Tetris-optimizer
 
 A Go program that reads a list of tetrominoes from a text file and assembles them into the **smallest possible square**.
 
