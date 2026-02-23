@@ -68,7 +68,7 @@ func isConnected(blocks []Block) bool {
 	touches := 0
 
 	for i := 0; i < len(blocks); i++ {
-		for j := 0; j < len(blocks); j++ {
+		for j := i + 1; j < len(blocks); j++ {
 			if i == j {
 				continue
 			}
@@ -90,5 +90,5 @@ func isConnected(blocks []Block) bool {
 	}
 
 	// valid tetrominoes have at least 6 side connections
-	return touches >= 6
+	return touches >= 3
 }
